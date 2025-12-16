@@ -6,6 +6,15 @@ name_1 = "Marcus"
 name_2 = "Lalitha"
 name_3 = "Sana"
 
+# you couldn't add to them
+# not alphabetical
+# allow duplicates
+# immutable (unchangeable)
+# can't remove, can't update - frozen!
+# better memory 
+# embed or nest tuples inside tuples -> tuples all the way down
+# not limited to one type
+
 #           0          1         2
 names = ("Marcus", "Lalitha", "Sana", "Claire", "Sarah")
 
