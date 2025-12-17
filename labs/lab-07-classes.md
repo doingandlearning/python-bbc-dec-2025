@@ -8,17 +8,26 @@ The aim of this lab is to create a `Headline` class to hold not just the text of
 
 ---
 
-## **What are Classes?**
+## Starter code 
 
-A **class** is a blueprint for creating objects that bundle data (attributes) with functions (methods) that act on that data. Think of it as a template that defines what an object should look like and what it can do.
+This covers step 1 and hopefully will give you a head start!
 
-### **Key Concepts**
+<details>
+  <summary>Starter code</summary>
+  
+```python
+class Headline:
+    def __init__(self, text, source):
+        self.text = text
+        self.source = source
 
-- **Class**: The blueprint/template for objects
-- **Object**: An instance created from a class
-- **Attributes**: Data stored in the object
-- **Methods**: Functions that belong to the object
-- **Constructor**: Special method that initializes new objects
+h = Headline(
+    "General election: Labour and Tories clash over tax",
+    "BBC News"
+)
+```
+
+</details>
 
 ---
 
@@ -70,6 +79,21 @@ A **class** is a blueprint for creating objects that bundle data (attributes) wi
 - Consider using an f-string to format the output clearly
 - Think about what information would be most helpful when debugging
 
+<details>
+  <summary>Possible solution</summary>
+
+```python
+## Add this inside your class
+def __str__(self):
+    return f"{self.text} ({self.source})"
+
+# Now it should print well
+print(h)
+
+```
+
+</details>
+
 ### **Expected Outcomes**
 
 - Printing a `Headline` object should show readable information
@@ -102,6 +126,21 @@ A **class** is a blueprint for creating objects that bundle data (attributes) wi
 - The method should `return len(self.text.split())`
 - Think about how this method relates to the object's data
 
+<details>
+  <summary>Possible solution</summary>
+
+```python
+## Add this inside your class
+def get_word_count(self):
+    return len(self.text.split())
+
+# The rule lives with the data
+print(h.get_word_count())
+
+```
+
+</details>
+
 ### **Expected Outcomes**
 
 - The method should return the correct word count
@@ -118,7 +157,7 @@ A **class** is a blueprint for creating objects that bundle data (attributes) wi
 
 ---
 
-## **Step 4: Refactoring Your Code to Use the Class**
+## **Step 4: Refactoring Your Code to Use the Class** (Optional/Extension/After the course)
 
 ### **Tasks**
 
